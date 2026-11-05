@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/phoenix-logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0d2f6b;--blue:#1b5fc1;--sky:#eaf3fd;--orange:#f59a23;--ink:#17233b;--muted:#5b6b86;--card:#fff;--bg:#f6faff;--shadow:0 10px 30px rgba(13,47,107,.10)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -123,7 +123,6 @@ footer .script{color:#fff;margin-bottom:6px}footer .script::before,footer .scrip
 .rv.in{opacity:1;transform:none}
 .d1{transition-delay:.12s}.d2{transition-delay:.24s}
 
-@media(max-width:900px){.grid{grid-template-columns:1fr;max-width:420px;margin:auto}}
 @media(max-width:980px){
  .burger{display:block}
  .links{position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:12px;display:none;box-shadow:var(--shadow)}
@@ -142,14 +141,14 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .modal{max-height:calc(100dvh - 32px);overscroll-behavior:contain}
 .mh{padding-right:58px}
 .x{width:44px;height:44px;top:8px;right:8px}
-@media(min-width:601px) and (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none}.card:last-child{grid-column:1/-1;width:calc(50% - 12px);justify-self:center}}
+
 @media(max-width:600px){
  .wrap{padding-inline:16px}
  section{padding:58px 0}
  .hero{padding:100px 0 60px}
  .lgo.big{height:118px}
  .head{margin-bottom:30px}
- .grid{grid-template-columns:minmax(0,1fr)}
+
  .sgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
  .sv-i{padding:20px 12px;min-width:0}.sv-i h4{font-size:.9rem}
  .links a{width:100%;text-align:center;min-height:44px}
@@ -160,6 +159,53 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
  footer{padding-bottom:90px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Signage-inspired identity, balanced panels and a single arrival flight. */
+:root{--navy:#252f49;--blue:#384b70;--sky:#f0f3f7;--orange:#bd5145;--ink:#283247;--muted:#606b7b;--bg:#fafbfd;--shadow:0 8px 28px rgba(37,47,73,.07)}
+html{scroll-padding-top:100px}
+.nb{height:82px}
+.logo{gap:12px}
+.logo .lgo{height:58px}
+.logo>span{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.95rem;letter-spacing:.035em}
+.logo small{font-family:Poppins,sans-serif;font-size:.59rem;color:var(--orange);letter-spacing:.085em;margin-top:3px}
+.hero{padding:108px 0 36px;background:radial-gradient(ellipse at 50% 30%,#fff 20%,#f0f3f7 100%)}
+.blob{display:none}
+.phoenix-arrival{width:148px;height:126px;margin-bottom:8px;animation:phoenix-arrive 2.8s cubic-bezier(.22,.7,.25,1) both}
+.hero-phoenix{width:100%;height:100%;overflow:visible}
+.phoenix-wing{transform-origin:790px 570px;animation:wingbeat .48s ease-in-out 5}
+@keyframes wingbeat{0%,100%{transform:rotate(0deg) scaleY(1)}50%{transform:rotate(12deg) scaleY(.72)}}
+@keyframes phoenix-arrive{0%{opacity:0;transform:translate(-38vw,65px) scale(.48) rotate(-18deg)}15%{opacity:1}55%{transform:translate(8vw,-30px) scale(.85) rotate(7deg)}80%{transform:translate(-12px,6px) scale(1.02) rotate(-3deg)}100%{opacity:1;transform:translate(0,0) scale(1) rotate(0)}}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.5rem,8vw,6.4rem);letter-spacing:.055em;line-height:.95;margin:20px 0 0;font-weight:700}
+h1 span{display:block;font-family:Poppins,sans-serif;font-size:clamp(.85rem,2.1vw,1.5rem);font-weight:600;letter-spacing:.14em;color:var(--orange);margin-top:16px;line-height:1.4}
+.hero-motto{font-size:clamp(1.15rem,2vw,1.45rem);color:var(--navy);margin-top:18px;font-weight:500}
+.hero p.sub{font-size:.92rem;max-width:620px;margin:8px auto 22px}
+.pill{font-size:.7rem;padding:4px 12px;box-shadow:none;background:transparent;border-color:#d9dee7}
+.chips{margin-top:28px;gap:8px;max-width:none}
+.chip{font-size:.65rem;padding:7px 13px;box-shadow:none;border:1px solid #dce1e9;border-bottom:2px solid var(--orange);border-radius:5px;background:rgba(255,255,255,.65)}
+section{padding:60px 0}
+.head{margin-bottom:30px}
+.head h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.2rem,4vw,3rem)}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:20px}
+.card{padding:26px 20px;border-radius:16px}
+.card h3{min-height:2em;display:flex;align-items:center;justify-content:center;font-size:1.16rem}
+.cred{min-height:90px;font-size:.8rem}
+.tags{min-height:76px;margin:10px 0 16px}
+.card .row{gap:7px}
+.card .row .btn{padding:11px 6px;font-size:.8rem}
+.btn{border-radius:8px}
+.sgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.sv-i{border:1px solid #e0e5ec;border-radius:12px;padding:22px 14px}
+.sv-i h4{font-size:.9rem}
+.visit{background:var(--navy)}
+.rv.pending{opacity:0;transform:translateY(22px)}
+.rv.in{opacity:1;transform:none}
+.card.rv{transition-delay:0s}
+.card.in:hover{transform:translateY(-6px)}
+@media(min-width:760px) and (max-width:1000px){.grid{gap:12px}.card{padding:24px 12px}.av{width:80px;height:80px;font-size:1.7rem}.card h3{font-size:1rem}.cred{min-height:104px}.tags{min-height:110px}.tags span{font-size:.7rem;padding:4px 8px}}
+@media(max-width:980px){.links{top:82px}}
+@media(max-width:759px){.grid{grid-template-columns:minmax(0,1fr);grid-auto-rows:1fr;max-width:480px;margin-inline:auto}.card{padding:26px 22px}.card h3,.cred{min-height:0}.tags{min-height:0;margin:16px 0 22px}.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.sgrid .sv-i:last-child{grid-column:1/-1}.hero{padding:102px 0 30px}.phoenix-arrival{width:124px;height:106px}.hero p.sub{font-size:.86rem}.chips{margin-top:24px}.chip{font-size:.6rem}.head p{font-size:.9rem}section{padding:46px 0}}
+@media(max-width:380px){.logo>span{font-size:1.6rem}.logo small{font-size:.5rem}.logo .lgo{height:48px}.logo{gap:7px}h1{font-size:3.2rem}h1 span{font-size:.75rem}.btn{padding:12px 18px;font-size:.85rem}}
+@media(prefers-reduced-motion:reduce){.rv.pending{opacity:1;transform:none}.phoenix-arrival{animation:none}.phoenix-wing{animation:none}}
 </style>
 </head>
 <body>
@@ -185,14 +231,39 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 <header class="hero" id="home">
   <div class="blob b1"></div><div class="blob b2"></div>
   <div class="wrap">
-    <img class="lgo big rv" src="assets/phoenix-logo.svg" width="1080" height="910" alt="Phoenix Multispeciality Clinic logo" decoding="async"><span class="pill rv"><i>●</i> Now open in Mahalunge, Pune</span>
-    <h1 class="rv d1" style="max-width:820px">Expert care for every <span>stage of life</span></h1>
+    <div class="phoenix-arrival"><svg class="hero-phoenix" xmlns="http://www.w3.org/2000/svg" viewBox="70 30 1080 910" role="img" aria-labelledby="title desc">
+  <title id="title">Phoenix Multispeciality Clinic</title>
+  <desc id="desc">A navy and red phoenix with a swept wing and curled tail surrounding a white medical emblem.</desc>
+  <!-- Hand-drawn vector artwork based on the clinic's supplied emblem. -->
+  <path fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round" d="M331 65C271 123 271 246 305 305L292 309C288 362 311 410 335 437C188 461 94 554 104 705C113 865 249 931 433 912C629 923 791 846 884 722C944 638 935 513 1051 435C1083 415 1109 409 1128 409C1123 377 1087 348 1040 347C1011 304 956 310 902 330C854 347 822 328 793 331C791 367 820 395 852 401L803 449C785 379 737 347 686 310C607 251 585 187 603 65C558 101 531 146 529 194L516 167C488 215 489 268 512 313C391 245 339 181 331 65Z"/>
+  <!-- Red crest and the long throat follow the original silhouette. -->
+  <path fill="#c83e51" d="M580 108C541 164 546 241 578 291C542 274 522 239 515 210C505 271 538 319 590 339C680 373 748 399 795 461C774 392 718 354 664 312C599 261 566 192 580 108Z"/>
+  <path fill="#c83e51" d="M1054 408C960 438 898 512 861 577C875 666 838 746 786 795C879 741 907 667 924 596C943 510 986 447 1054 408Z"/>
+  <!-- Head and beak. -->
+  <path fill="#222d4c" d="M814 351C843 360 865 360 902 348C958 330 1003 324 1035 361C1071 355 1094 373 1105 393C1004 380 914 455 854 551C846 515 830 484 811 464L881 393C843 394 823 375 814 351Z"/>
+  <!-- Swept upper wing and tapered feather separations. -->
+  <path class="phoenix-wing" fill="#222d4c" d="M325 109C283 212 318 304 425 365C514 416 641 450 692 506C598 462 484 446 407 402C356 373 329 348 310 326C318 410 376 477 460 500C553 525 640 514 688 571C611 539 520 555 433 530C466 580 524 595 588 597C645 599 698 604 726 645C783 731 703 838 551 895C725 856 839 752 842 631C847 508 763 444 666 398C553 345 355 294 325 109Z"/>
+  <!-- Curled tail, with a red inner feather and white medical field. -->
+  <path fill="#222d4c" d="M317 457C207 477 132 564 137 663C139 733 184 783 242 800C179 744 174 674 201 603C225 538 269 494 317 457Z"/>
+  <path fill="#c83e51" d="M350 469C239 502 203 578 213 669C221 744 266 793 345 816C252 770 227 720 232 654C238 574 303 521 415 510C390 499 368 484 350 469Z"/>
+  <path fill="#222d4c" d="M123 701C176 809 291 855 421 828C534 804 612 725 665 636C699 646 723 671 720 706C712 798 600 877 466 897C295 918 144 876 123 701Z"/>
+  <!-- Medical staff and entwined serpents, separated by a white keyline. -->
+  <path fill="#222d4c" d="M270 631H505V701H270Z"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M388 563V787M361 588C325 579 321 614 353 632C381 648 424 649 421 677C419 697 370 709 368 732C366 745 380 751 390 741M413 589C450 582 452 614 423 633C395 652 352 655 351 677C350 700 389 708 400 726C412 747 387 758 383 773" stroke="#fff" stroke-width="23"/>
+    <path d="M388 563V787" stroke="#222d4c" stroke-width="15"/>
+    <path d="M361 588C325 579 321 614 353 632C381 648 424 649 421 677C419 697 370 709 368 732C366 745 380 751 390 741M413 589C450 582 452 614 423 633C395 652 352 655 351 677C350 700 389 708 400 726C412 747 387 758 383 773" stroke="#222d4c" stroke-width="12"/>
+  </g>
+  <g fill="#222d4c"><circle cx="388" cy="554" r="20"/><path d="M388 754C355 770 366 792 388 811C410 791 420 770 388 754Z"/></g>
+</svg>
+</div><span class="pill rv"><i>●</i> Now open in Mahalunge, Pune</span>
+    <h1 class="rv d1">PHOENIX<span>MULTISPECIALITY CLINIC</span></h1><p class="hero-motto rv d1">Expert care for every stage of life.</p>
     <p class="sub rv d2">Specialist doctors, one clinic, right beside Godrej Hillside &amp; Green Vistas. Choose your doctor and book instantly on WhatsApp.</p>
     <div class="btns rv d2">
       <a href="#doctors" class="btn p">Meet our doctors</a>
       <a href="#services" class="btn o">Our services</a>
     </div>
-    <div class="chips rv d2">
+    <div class="chips rv d2" aria-label="Clinic specialties">
       <span class="chip">ORTHOPAEDICS</span><span class="chip">GYNAECOLOGY</span><span class="chip">GENERAL SURGERY</span><span class="chip">PAEDIATRIC</span><span class="chip">DIAGNOSTICS</span>
     </div>
   </div>
@@ -331,8 +402,10 @@ $("#fab").href="#doctors";$("#fab").removeAttribute("target");
 
 /* scroll effects */
 const nav=$("#nav");addEventListener("scroll",()=>nav.classList.toggle("s",scrollY>10),{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove("pending");e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+ document.querySelectorAll(".rv").forEach(el=>{el.classList.add("pending");io.observe(el)});
+}
 $("#yr").textContent=new Date().getFullYear();
 if(location.hash.startsWith("#dr-"))openDr(location.hash.slice(4));
 </script>
