@@ -63,7 +63,8 @@ section{padding:88px 0}
 .card{background:var(--card);border-radius:24px;padding:30px 26px;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid #e3edf9}
 .card::before{content:"";position:absolute;inset:0 0 auto;height:6px;background:var(--c)}
 .card:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(13,47,107,.18)}
-.av{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;font-size:2.1rem;font-weight:800;color:#fff;background:var(--c);box-shadow:0 0 0 6px #fff,0 0 0 9px var(--c);margin:8px 0 22px}
+.av{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;font-size:2.1rem;font-weight:800;color:var(--c);background:#fff;box-shadow:0 0 0 6px #fff,0 0 0 9px var(--c);margin:8px 0 22px}
+.av img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
 .dept{font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--c);text-transform:uppercase}
 .card h3{font-size:1.3rem;color:var(--navy);margin:4px 0 2px}
 .cred{font-size:.85rem;color:var(--muted);min-height:44px}
@@ -100,7 +101,7 @@ footer .script{color:#fff;margin-bottom:6px}footer .script::before,footer .scrip
 .modal{background:#fff;border-radius:28px;max-width:640px;width:100%;max-height:92vh;overflow:auto;position:relative;animation:pop .35s cubic-bezier(.2,.9,.3,1.2)}
 @keyframes pop{from{transform:translateY(30px) scale(.94);opacity:0}}
 .mh{padding:34px 30px 24px;background:linear-gradient(135deg,var(--c),var(--navy));color:#fff;display:flex;gap:18px;align-items:center}
-.mh .av{width:76px;height:76px;font-size:1.5rem;margin:0;flex:none;background:rgba(255,255,255,.2);box-shadow:0 0 0 3px #fff}
+.mh .av{width:76px;height:76px;font-size:1.5rem;margin:0;flex:none;background:#fff;box-shadow:0 0 0 3px #fff}
 .mh h3{font-size:1.4rem}.mh p{opacity:.9;font-size:.9rem}
 .x{position:absolute;top:14px;right:16px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.25);color:#fff;font-size:1.2rem;cursor:pointer}
 .mb{padding:26px 30px 30px}
@@ -315,19 +316,19 @@ section{padding:60px 0}
 <script>
 /* ===== EDIT HERE: doctor details & WhatsApp numbers (country code 91 + 10 digits) ===== */
 const DOCTORS=[
- {id:"arunima",name:"Dr. Arunima Mishra",init:"AM",dept:"Gynaecology",role:"Gynecologist & Obstetrician",cred:"MBBS · DGO · DNB",color:"#e0537a",
+ {id:"arunima",name:"Dr. Arunima Mishra",photo:"assets/doctors/arunima-mishra.webp",dept:"Gynaecology",role:"Gynecologist & Obstetrician",cred:"MBBS · DGO · DNB",color:"#e0537a",
   wa:"919449437511",tags:["Pregnancy care","Infertility","Laparoscopy"],
   bio:"Formerly Assistant Professor at Symbiosis Medical College for Women, Pune, and previously at M S Ramaiah Hospital, Bengaluru. Expertise in infertility and laparoscopic surgery. Appointment only.",
   services:["Pregnancy & antenatal care","Normal & caesarean delivery","Infertility evaluation & treatment","Menopause care","High-risk pregnancy care","PCOD / PCOS & period problems","Laparoscopic (keyhole) surgery","Pap smear & ultrasound"],
   timings:["Daily: 4:00 PM – 6:30 PM","1st & 3rd Saturday: 9 AM – 12 PM, 3 PM – 5 PM","Every Sunday: 9 AM – 12 PM, 3 PM – 5 PM"],
   addr:"Shop No. 1, near MediOre Chemist & Lifestyle Store, beside Godrej Hillside 2, GIIS School, Mahalunge, Pune 45."},
- {id:"nikhil",name:"Dr. Nikhil Deo",init:"ND",dept:"Orthopaedics",role:"Orthopaedic Surgeon",cred:"MBBS · D.Ortho · DNB Ortho · FIJR · FISM",color:"#1b5fc1",
+ {id:"nikhil",name:"Dr. Nikhil Deo",photo:"assets/doctors/nikhil-deo.webp",dept:"Orthopaedics",role:"Orthopaedic Surgeon",cred:"MBBS · D.Ortho · DNB Ortho · FIJR · FISM",color:"#1b5fc1",
   wa:"917820930018",tags:["Fractures","Joint pain","Sports injuries"],
   bio:"Your orthopaedic doctor in town, treating bones, joints and sports injuries for every age.",
   services:["Fracture & paediatric fracture care","Plaster application & cast services","Bone, joint & back pain","Shoulder & rotator cuff injuries","Arthritis management","Sports & ligament injuries","Paediatric fracture care","Knee, hip, shoulder & joint pain"],
   timings:["Morning: 9:00 AM – 11:00 AM (Daily)","Evening: 6:00 PM – 9:00 PM (Wednesday & Saturday)"],
   addr:"Shop No. 1, Ground Floor, beside MediOre Medical & General Store, opposite Godrej Green Vistas, Mahalunge–Nande Road, Mahalunge, Pune."},
- {id:"tejas",name:"Dr. Tejas Girase",init:"TG",dept:"General Surgery",role:"Consultant Proctologist & General Surgeon",cred:"M.S. General Surgery (ISM) (Mumbai)",color:"#0f9d8f",
+ {id:"tejas",name:"Dr. Tejas Girase",photo:"assets/doctors/tejas-girase.webp",dept:"General Surgery",role:"Consultant Proctologist & General Surgeon",cred:"M.S. General Surgery (ISM) (Mumbai)",color:"#0f9d8f",
   wa:"917721082831",tags:["Piles & fissure","Hernia","Minor procedures"],
   bio:"Safe surgery, better recovery. Visit for consultation and proper guidance on all surgical care.",
   services:["Hernia, appendix, hydrocele","Phimosis","Gallbladder & renal stones","Fibroadenoma (breast lump)","Piles, fissure, fistula, abscess","Lipoma & sebaceous cyst removal","Dermoid cyst, ganglion, corn","Wound care & lobuloplasty"],
@@ -343,7 +344,7 @@ const grid=$("#dgrid"),ov=$("#ov"),md=$("#md");
 
 grid.innerHTML=DOCTORS.map((d,i)=>`
  <article class="card rv d${i}" style="--c:${d.color}" data-dr="${d.id}" id="dr-${d.id}" tabindex="0" role="button" aria-label="Open details for ${d.name}">
-  <div class="av">${d.init}</div>
+  <div class="av"><img src="${d.photo}" alt="${d.name}" width="768" height="768" decoding="async"></div>
   <span class="dept">${d.dept}</span>
   <h3>${d.name}</h3>
   <p class="cred">${d.role}<br>${d.cred}</p>
@@ -361,7 +362,7 @@ function openDr(id){
  const d=DOCTORS.find(x=>x.id===id);if(!d)return;
  md.style.setProperty("--c",d.color);
  md.innerHTML=`<button class="x" aria-label="Close">✕</button>
- <div class="mh"><div class="av">${d.init}</div><div><h3 id="doctor-title">${d.name}</h3><p>${d.role}<br>${d.cred}</p></div></div>
+ <div class="mh"><div class="av"><img src="${d.photo}" alt="${d.name}" width="768" height="768" decoding="async"></div><div><h3 id="doctor-title">${d.name}</h3><p>${d.role}<br>${d.cred}</p></div></div>
  <div class="mb">
   <h5>About</h5><p>${d.bio}</p>
   <h5>Services</h5><ul>${d.services.map(s=>`<li>${s}</li>`).join("")}</ul>
